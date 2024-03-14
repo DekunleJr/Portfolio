@@ -1,0 +1,21 @@
+body{
+    background-color: #0F152E;
+    color: white;
+}
+img{
+    inline-size: auto;
+}
+h2{
+    text-align: center;
+}
+p{
+    text-align: justify;
+}
+.half{
+    background-color: black;
+    box-sizing: border-box;
+    
+    border-radius: 10px;
+    height: 200px;
+    width: 45%;
+}
