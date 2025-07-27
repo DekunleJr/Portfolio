@@ -38,7 +38,6 @@
   object-fit: cover; /* Cover the area without distortion */
   border-radius: 4px;
   margin-bottom: 1rem;
-  margin-top: -7rem; /* Slight overlap for a modern look */
 }
 
 .project-item h3 {
@@ -51,4 +50,15 @@
   font-size: 0.95rem;
   line-height: 1.6;
   color: #adb5bd; /* Muted light text for dark mode */
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 2rem 1rem;
+  }
+
+  .projects h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
 }

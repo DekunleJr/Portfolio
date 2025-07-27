@@ -47,3 +47,26 @@
 .contact-info a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 2rem 1rem;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-info {
+    padding: 1.5rem;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+  }
+
+  .contact-info p i {
+    font-size: 1.4rem;
+  }
+}

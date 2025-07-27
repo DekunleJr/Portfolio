@@ -7,6 +7,7 @@
   background: #212121; /* Dark mode background */
   display: flex;
   flex-direction: column;
+  z-index: 1000;
 }
 
 .header-content {
@@ -80,4 +81,69 @@
 
 .header-content::-webkit-scrollbar-thumb:hover {
   background: #777; /* Lighter thumb on hover */
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .header-content {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #212121;
+    padding: 1rem;
+  }
+
+  .header-content.active {
+    display: block;
+  }
+
+  .profile-img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0;
+  }
+
+  .profile h1 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .profile span {
+    display: none;
+  }
+
+  .header nav {
+    margin-top: 0;
+  }
+
+  .header nav ul {
+    flex-direction: column;
+  }
+
+  .header nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #f8f9fa;
+    margin: 5px 0;
+  }
 }

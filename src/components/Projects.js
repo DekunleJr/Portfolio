@@ -13,7 +13,7 @@ const Projects = () => {
           rel="noopener noreferrer"
           className="project-item"
         >
-          <img src="/cit.png" alt="CIT Project" />
+          <img src="/cit.jpg" alt="CIT Project" />
           <h3>Custom Web Application Backend Development (CIT)</h3>
           <p>
             Designed and implemented a scalable backend for a dynamic web

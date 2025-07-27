@@ -64,3 +64,13 @@
   padding-right: 5px;
   box-sizing: border-box;
 }
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 2rem 1rem;
+  }
+
+  .skills h2 {
+    font-size: 2rem;
+  }
+}

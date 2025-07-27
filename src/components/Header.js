@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header className="header">
-      <div className="header-content">
+      <div className="menu-toggle" onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div className={`header-content ${isOpen ? "active" : ""}`}>
         <div className="profile">
           <img
             src="/dekunle.png"
@@ -17,25 +28,39 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <a href="#home">Home</a>
+              <a href="#home" onClick={toggleMenu}>
+                Home
+              </a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="#about" onClick={toggleMenu}>
+                About
+              </a>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <a href="#projects" onClick={toggleMenu}>
+                Projects
+              </a>
             </li>
             <li>
-              <a href="#skills">Skills</a>
+              <a href="#skills" onClick={toggleMenu}>
+                Skills
+              </a>
             </li>
             <li>
-              <a href="#experience">Experience</a>
+              <a href="#experience" onClick={toggleMenu}>
+                Experience
+              </a>
             </li>
             <li>
-              <a href="#education">Education</a>
+              <a href="#education" onClick={toggleMenu}>
+                Education
+              </a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="#contact" onClick={toggleMenu}>
+                Contact
+              </a>
             </li>
           </ul>
         </nav>

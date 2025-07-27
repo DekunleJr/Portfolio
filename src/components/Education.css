@@ -30,11 +30,22 @@
 }
 
 .certifications ul {
-  list-style-position: inside;
-  padding-left: 0;
+  list-style: none; /* Remove default bullet points */
+  padding-left: 1.5rem; /* Add padding for custom bullet points */
 }
 
 .certifications ul li {
-  margin-bottom: 0.5rem;
+  position: relative; /* For positioning the custom bullet */
+  margin-bottom: 0.7rem; /* Slightly more space between items */
+  line-height: 1.6;
   color: #f8f9fa; /* Light text for dark mode */
+}
+
+.certifications ul li::before {
+  content: "▶"; /* Custom arrow pointer */
+  color: #007bff; /* Primary blue color for the arrow */
+  font-size: 0.8rem; /* Adjust size of the arrow */
+  position: absolute;
+  left: -1.2rem; /* Position the arrow outside the text */
+  top: 0.3rem; /* Adjust vertical alignment */
 }
