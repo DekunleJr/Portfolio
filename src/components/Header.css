@@ -62,7 +62,7 @@
 
 .header nav ul li a:hover,
 .header nav ul li a.active {
-  color: #007bff; /* Primary blue for active/hover state */
+  color: #28a745; /* Primary green for active/hover state */
 }
 
 /* Custom Scrollbar Styles */

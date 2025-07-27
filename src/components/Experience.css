@@ -47,7 +47,7 @@
 
 .experience-item ul li::before {
   content: "▶"; /* Custom arrow pointer */
-  color: #007bff; /* Primary blue color for the arrow */
+  color: #28a745; /* Primary green color for the arrow */
   font-size: 0.8rem; /* Adjust size of the arrow */
   position: absolute;
   left: -1.2rem; /* Position the arrow outside the text */

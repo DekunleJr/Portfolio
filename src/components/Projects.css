@@ -43,7 +43,7 @@
 .project-item h3 {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
-  color: #007bff; /* Primary blue for project titles */
+  color: #28a745; /* Primary green for project titles */
 }
 
 .project-item p {

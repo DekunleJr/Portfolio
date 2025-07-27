@@ -5,10 +5,10 @@
   min-height: 75vh;
   text-align: left;
   background-image: linear-gradient(
-      rgba(0, 123, 255, 0.6),
-      rgba(0, 123, 255, 0.6)
+      rgba(40, 167, 69, 0.6),
+      rgba(40, 167, 69, 0.6)
     ),
-    /* Primary blue overlay */ url("db.png");
+    /* Primary green overlay */ url("db.png");
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -29,7 +29,7 @@
 }
 
 .btn {
-  background: #007bff; /* Primary blue */
+  background: #28a745; /* Primary green */
   color: #fff;
   padding: 1rem 2rem;
   text-decoration: none;
@@ -39,7 +39,7 @@
 }
 
 .btn:hover {
-  background: #0056b3; /* Darker blue on hover */
+  background: #218838; /* Darker green on hover */
 }
 
 @media (max-width: 768px) {

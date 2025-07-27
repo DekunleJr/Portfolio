@@ -33,14 +33,14 @@
 
 .contact-info p i {
   margin-right: 1rem; /* More space between icon and text */
-  color: #007bff; /* Primary blue for icons */
+  color: #28a745; /* Primary green for icons */
   font-size: 1.6rem; /* Larger icons */
   min-width: 2rem; /* Ensure consistent icon spacing */
   text-align: center;
 }
 
 .contact-info a {
-  color: #007bff; /* Primary blue for links */
+  color: #28a745; /* Primary green for links */
   text-decoration: none;
 }
 
