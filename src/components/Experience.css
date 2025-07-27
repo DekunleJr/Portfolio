@@ -1,0 +1,55 @@
+.experience {
+  padding: 2rem 1rem;
+  background-color: #1a1a1a; /* Dark mode background */
+}
+
+.experience h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #f8f9fa; /* Light heading for dark mode */
+}
+
+.experience-item {
+  background-color: #212121; /* Darker background for items */
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Darker shadow for contrast */
+}
+
+.experience-item h3 {
+  margin-bottom: 0.5rem;
+  color: #f8f9fa; /* Light heading for dark mode */
+}
+
+.experience-item .company {
+  font-style: italic;
+  color: #adb5bd; /* Muted light grey for dark mode */
+  margin-bottom: 0.5rem;
+}
+
+.experience-item .date {
+  color: #adb5bd; /* Muted light grey for dark mode */
+  margin-bottom: 1rem;
+}
+
+.experience-item ul {
+  list-style: none; /* Remove default bullet points */
+  padding-left: 1.5rem; /* Add padding for custom bullet points */
+}
+
+.experience-item ul li {
+  position: relative; /* For positioning the custom bullet */
+  margin-bottom: 0.7rem; /* Slightly more space between items */
+  line-height: 1.6;
+  color: #f8f9fa; /* Light text for dark mode */
+}
+
+.experience-item ul li::before {
+  content: "▶"; /* Custom arrow pointer */
+  color: #007bff; /* Primary blue color for the arrow */
+  font-size: 0.8rem; /* Adjust size of the arrow */
+  position: absolute;
+  left: -1.2rem; /* Position the arrow outside the text */
+  top: 0.3rem; /* Adjust vertical alignment */
+}

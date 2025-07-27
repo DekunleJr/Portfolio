@@ -1,0 +1,43 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  min-height: 75vh;
+  text-align: left;
+  background-image: linear-gradient(
+      rgba(0, 123, 255, 0.6),
+      rgba(0, 123, 255, 0.6)
+    ),
+    /* Primary blue overlay */ url("db.png");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 50px; /* Ensure no padding */
+  margin: 0; /* Ensure no margin */
+}
+
+.hero-content h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2; /* Adjust line height for better separation */
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: #007bff; /* Primary blue */
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0056b3; /* Darker blue on hover */
+}

@@ -1,0 +1,66 @@
+.skills {
+  padding: 4rem;
+  background-color: #1a1a1a; /* Dark mode background */
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #f8f9fa; /* Light heading for dark mode */
+}
+
+.skill-category {
+  margin-bottom: 2rem;
+}
+
+.skill-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #f8f9fa; /* Light heading for dark mode */
+}
+
+.skill-items-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* 3 columns, responsive */
+  gap: 1.5rem; /* Spacing between skill items */
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column; /* Stack span and progress bar */
+  margin-bottom: 0.8rem;
+  background-color: #212121; /* Darker background for each skill item */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Darker shadow for contrast */
+}
+
+.skill-item span {
+  font-weight: bold;
+  color: #f8f9fa; /* Light text for dark mode */
+  margin-bottom: 0.5rem; /* Space between skill name and progress bar */
+}
+
+.progress-bar {
+  width: 100%; /* Take full width of its parent */
+  background-color: #343a40; /* Darker background for progress bar */
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background-color: #007bff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #fff;
+  font-size: 0.7rem;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
