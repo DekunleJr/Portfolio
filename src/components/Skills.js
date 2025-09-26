@@ -20,11 +20,11 @@ const Skills = () => {
             </div>
           </div>
           <div className="skill-item">
-            <span>Python</span>
+            <span>Python(Fastapi)</span>
             <div className="progress-bar">
               <div
                 className="progress-fill"
-                style={{ width: "50%", backgroundColor: "#3776AB" }}
+                style={{ width: "80%", backgroundColor: "#3776AB" }}
               >
                 50%
               </div>
@@ -175,6 +175,39 @@ const Skills = () => {
               <div
                 className="progress-fill"
                 style={{ width: "95%", backgroundColor: "#52B0E7" }}
+              >
+                95%
+              </div>
+            </div>
+          </div>
+          <div className="skill-item">
+            <span>Fastapi</span>
+            <div className="progress-bar">
+              <div
+                className="progress-fill"
+                style={{ width: "95%", backgroundColor: "#009688" }}
+              >
+                95%
+              </div>
+            </div>
+          </div>
+          <div className="skill-item">
+            <span>Sqlalchemy</span>
+            <div className="progress-bar">
+              <div
+                className="progress-fill"
+                style={{ width: "90%", backgroundColor: "#2B5D82" }}
+              >
+                90%
+              </div>
+            </div>
+          </div>
+          <div className="skill-item">
+            <span>Alembic</span>
+            <div className="progress-bar">
+              <div
+                className="progress-fill"
+                style={{ width: "95%", backgroundColor: "#2E8B57" }}
               >
                 95%
               </div>
