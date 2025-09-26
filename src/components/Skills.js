@@ -109,6 +109,28 @@ const Skills = () => {
             </div>
           </div>
           <div className="skill-item">
+            <span>Render</span>
+            <div className="progress-bar">
+              <div
+                className="progress-fill"
+                style={{ width: "90%", backgroundColor: "#4945FF" }}
+              >
+                90%
+              </div>
+            </div>
+          </div>
+          <div className="skill-item">
+            <span>Heroku</span>
+            <div className="progress-bar">
+              <div
+                className="progress-fill"
+                style={{ width: "80%", backgroundColor: "#430098" }}
+              >
+                80%
+              </div>
+            </div>
+          </div>
+          <div className="skill-item">
             <span>Azure</span>
             <div className="progress-bar">
               <div
