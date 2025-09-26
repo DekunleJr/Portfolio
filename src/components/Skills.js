@@ -159,6 +159,17 @@ const Skills = () => {
             </div>
           </div>
           <div className="skill-item">
+            <span>React</span>
+            <div className="progress-bar">
+              <div
+                className="progress-fill"
+                style={{ width: "90%", backgroundColor: "#61DAFB" }}
+              >
+                90%
+              </div>
+            </div>
+          </div>
+          <div className="skill-item">
             <span>Mongoose</span>
             <div className="progress-bar">
               <div
