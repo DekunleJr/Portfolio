@@ -8,6 +8,20 @@ const Projects = () => {
       <h2>Here are some of the projects I've worked on:</h2>
       <div className="projects-grid">
         <a
+          href="https://mioshio.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-item"
+        >
+          <img src="/mioshio.svg" alt="Mioshio Project" />
+          <h3>Backend Development (mioshio)</h3>
+          <p>
+            Designed and implemented a scalable backend for a dynamic web
+            application using Node.js and Express.js, featuring robust API
+            development and MySQL integration.
+          </p>
+        </a>
+        <a
           href="https://www.citedu.org/"
           target="_blank"
           rel="noopener noreferrer"

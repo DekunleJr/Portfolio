@@ -31,6 +31,17 @@ const Skills = () => {
             </div>
           </div>
           <div className="skill-item">
+            <span>PhP(Laravel)</span>
+            <div className="progress-bar">
+              <div
+                className="progress-fill"
+                style={{ width: "70%", backgroundColor: "#ec4c0cff" }}
+              >
+                70%
+              </div>
+            </div>
+          </div>
+          <div className="skill-item">
             <span>Java</span>
             <div className="progress-bar">
               <div

@@ -35,6 +35,68 @@ const Experience = () => {
         </ul>
       </div>
       <div className="experience-item">
+        <h3>Full-Stack Developer</h3>
+        <p className="company">Iammcoding Services Limited – Abuja, Nigeria</p>
+        <p className="date">Jan 2025 – May 2025</p>
+        <ul>
+          <li>
+            Built and maintained full-stack web applications using React for the frontend and Node.js,
+            Express, and TypeScript for the backend.
+          </li>
+          <li>
+            Developed intuitive and responsive user interfaces in React,
+            implementing reusable components and efficient state management (Context API/Redux).
+          </li>
+          <li>
+            Engineered high-performance server-side logic and
+            RESTful APIs with secure JWT/OAuth2 authentication, error handling, and API versioning.
+          </li>
+          <li>
+            Optimized system performance using PostgreSQL
+            & MongoDB through indexing, query optimization and Redis caching.
+          </li>
+          <li>
+            Ensured seamless integration between frontend and backend using Swagger,
+            Postman, and GitHub collaboration workflows.
+          </li>
+          <li>
+            Implemented CI/CD pipelines via GitHub Actions and Docker Compose,
+            enabling automated testing, builds and deployments.
+          </li>
+        </ul>
+      </div>
+      <div className="experience-item">
+        <h3>Full-Stack Developer</h3>
+        <p className="company">Locai – Abuja, Nigeria</p>
+        <p className="date">Sept 2024 – March 2025</p>
+        <ul>
+          <li>
+            Developed and consumed RESTful APIs, ensuring smooth frontend–backend
+            integration using Swagger, Postman, and GitHub
+          </li>
+          <li>
+            Built responsive, reusable, and dynamic UI components in React,
+            integrating state management (Context API/Redux) and optimized rendering for performance.
+          </li>
+          <li>
+            Designed, developed, and maintained full-stack applications
+            using React (frontend) and Node.js, Express, TypeScript (backend).
+          </li>
+          <li>
+            Integrated CI/CD pipelines using GitHub Actions and
+            Docker Compose, automating builds, tests, and deployments.
+          </li>
+          <li>
+            Optimized application performance with PostgreSQL
+            & MongoDB queries, indexing, and Redis caching for speed and scalability.
+          </li>
+          <li>
+            Collaborated cross-functionally with designers and product
+            teams to deliver intuitive user experiences and high-quality features.
+          </li>
+        </ul>
+      </div>
+      <div className="experience-item">
         <h3>Back-End Developer</h3>
         <p className="company">MultiChoice Nigeria – Abuja, Nigeria</p>
         <p className="date">November 2022 – September 2024</p>
