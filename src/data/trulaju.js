@@ -1,0 +1,90 @@
+const trulaju = {
+  name: 'Trulaju',
+  role: 'Full-Stack Engineer',
+  period: 'Jan 2026 — Present',
+  hook: 'A telematics-based, pay-per-kilometer vehicle insurance platform for the Nigerian market.',
+  problem:
+    'Traditional vehicle insurance relies largely on fixed pricing structures. Trulaju prices cover from real mileage reported by GPS trackers, so drivers pay for the distance they actually drive.',
+  contribution:
+    'The backend ingests real-time telemetry from GPS devices, keeps an accurate mileage account for every vehicle, and uses that consumption to drive usage-based billing — plus the policy, wallet, claims and notification workflows around it.',
+  pipeline: [
+    { label: 'GPS Trackers', note: 'Vehicle hardware' },
+    { label: 'Flespi MQTT', note: 'Telemetry gateway' },
+    { label: 'Trulaju Backend', note: 'FastAPI · services' },
+    { label: 'Mileage Accounting', note: 'Pay-per-km basis' },
+    { label: 'Charging & Wallet', note: 'Automatic billing' },
+    { label: 'Policy · Claims · Notifications', note: 'Business workflows' },
+  ],
+  backendLayers: [
+    { name: 'API Layer', note: 'REST routes, auth, validation', scope: '50+ route modules' },
+    { name: 'Service Layer', note: 'Business logic and processes', scope: '40 service classes' },
+    { name: 'Business / Data Layer', note: 'Models, repositories, state', scope: '24 model files' },
+    {
+      name: 'Infrastructure / Integration Layer',
+      note: 'External services, jobs, storage',
+      scope: '8+ integrations',
+    },
+  ],
+  dataStores: ['PostgreSQL', 'MongoDB', 'Redis', 'DigitalOcean Spaces'],
+  externalSystems: [
+    'Leadway Insurance',
+    'Paystack',
+    'ALATPay / Wema',
+    'Maps services',
+    'Webhooks / notification providers',
+  ],
+  telemetryOutputs: [
+    { label: 'Telemetry / trip history', note: 'MongoDB — historical location and mileage records' },
+    { label: 'Device state', note: 'Current state of every GPS device' },
+    { label: 'Vehicle mileage state', note: 'Mileage accounting for usage-based billing' },
+    { label: 'Device messages', note: 'Latest telemetry snapshot per device' },
+    { label: 'Webhook events', note: 'Business events pushed to integrations' },
+  ],
+  metrics: [
+    { value: 190, prefix: '~', suffix: '', label: 'Python files', note: 'Focused modules across the backend codebase' },
+    { value: 39500, prefix: '~', suffix: '', label: 'Lines of code', note: 'A mature, non-trivial production codebase' },
+    { value: 50, prefix: '', suffix: '+', label: 'API route modules', note: 'The surface of many business domains' },
+    { value: 40, prefix: '', suffix: '', label: 'Service classes', note: 'Business logic is structured, not scattered' },
+    { value: 24, prefix: '', suffix: '', label: 'Database model files', note: 'A data layer spanning multiple stores' },
+    { value: 76, prefix: '', suffix: '', label: 'Schema migrations', note: 'The schema evolves safely over time (Alembic)' },
+    { value: 14, prefix: '', suffix: '', label: 'Scheduled jobs', note: 'Automated background processes' },
+    { value: 8, prefix: '', suffix: '', label: 'External integrations', note: 'Business systems connected end to end' },
+    { value: 4, prefix: '', suffix: '', label: 'Data & storage systems', note: 'PostgreSQL, MongoDB, Redis, Spaces' },
+  ],
+  backgroundJobs: [
+    'Mileage charging',
+    'Notifications',
+    'Policy retry',
+    'Document refresh',
+    'Expiry management',
+    'Webhook processing',
+  ],
+  backgroundCopy:
+    'Not everything happens when a user clicks a button. API requests return immediately, while Redis + ARQ runs scheduled and background work — mileage charging, notifications, retries, document refreshes, expiry management and webhook processing — so the product keeps moving even when nobody is watching.',
+  security: [
+    'JWT authentication with refresh tokens',
+    'bcrypt password hashing',
+    'Role-based and permission-based authorization',
+    'Resource:Action:Scope permission model',
+    'Audit logging',
+    'Secure database connections',
+    'Input validation throughout',
+    'Controlled document handling',
+  ],
+  securityNote:
+    'Security is treated as a core architectural concern rather than an afterthought.',
+  businessFlow: [
+    'Quote',
+    'Purchase',
+    'Payment',
+    'Policy creation',
+    'Device assignment',
+    'Mileage tracking',
+    'Automatic charging',
+    'Notifications',
+    'Renewal',
+  ],
+  claimsFlow: ['Claims', 'Incident', 'Document upload', 'Admin review', 'Decision'],
+};
+
+export default trulaju;

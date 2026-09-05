@@ -1,55 +1,195 @@
 .experience {
-  padding: 2rem 1rem;
-  background-color: #1a1a1a; /* Dark mode background */
+  background: var(--bg);
 }
 
-.experience h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #f8f9fa; /* Light heading for dark mode */
+.exp-timeline {
+  position: relative;
+  padding-left: clamp(1.4rem, 3vw, 2.4rem);
 }
 
-.experience-item {
-  background-color: #212121; /* Darker background for items */
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Darker shadow for contrast */
+.exp-timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(52, 211, 153, 0.5), rgba(255, 255, 255, 0.08) 60%);
+  border-radius: 2px;
 }
 
-.experience-item h3 {
-  margin-bottom: 0.5rem;
-  color: #f8f9fa; /* Light heading for dark mode */
-}
-
-.experience-item .company {
-  font-style: italic;
-  color: #adb5bd; /* Muted light grey for dark mode */
-  margin-bottom: 0.5rem;
-}
-
-.experience-item .date {
-  color: #adb5bd; /* Muted light grey for dark mode */
+.exp-reveal {
+  position: relative;
   margin-bottom: 1rem;
 }
 
-.experience-item ul {
-  list-style: none; /* Remove default bullet points */
-  padding-left: 1.5rem; /* Add padding for custom bullet points */
-}
-
-.experience-item ul li {
-  position: relative; /* For positioning the custom bullet */
-  margin-bottom: 0.7rem; /* Slightly more space between items */
-  line-height: 1.6;
-  color: #f8f9fa; /* Light text for dark mode */
-}
-
-.experience-item ul li::before {
-  content: "▶"; /* Custom arrow pointer */
-  color: #28a745; /* Primary green color for the arrow */
-  font-size: 0.8rem; /* Adjust size of the arrow */
+.exp-reveal::before {
+  content: '';
   position: absolute;
-  left: -1.2rem; /* Position the arrow outside the text */
-  top: 0.3rem; /* Adjust vertical alignment */
+  left: calc(-1 * clamp(1.4rem, 3vw, 2.4rem) + 1px);
+  top: 26px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--text-muted);
+  z-index: 1;
+}
+
+.exp-reveal:has(.featured)::before {
+  border-color: var(--accent);
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.15);
+}
+
+.exp-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.25s ease;
+}
+
+.exp-item:hover {
+  border-color: var(--border-strong);
+}
+
+.exp-item.featured {
+  border-color: rgba(52, 211, 153, 0.35);
+  background:
+    linear-gradient(180deg, rgba(52, 211, 153, 0.05), rgba(52, 211, 153, 0) 55%),
+    var(--surface);
+}
+
+.exp-header {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  color: inherit;
+  padding: 1.4rem 1.5rem 1.2rem;
+  cursor: pointer;
+}
+
+.exp-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.exp-titles {
+  min-width: 0;
+}
+
+.exp-role {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.05rem;
+  margin-bottom: 0.25em;
+}
+
+.exp-badge {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  border-radius: 999px;
+  padding: 0.18rem 0.6rem;
+}
+
+.exp-company {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-2);
+  margin-bottom: 0.2em;
+}
+
+.exp-period {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.exp-chevron {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  transition: transform 0.25s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.exp-item.open .exp-chevron {
+  transform: rotate(180deg);
+  color: var(--accent);
+  border-color: rgba(52, 211, 153, 0.35);
+}
+
+.exp-summary {
+  margin: 0.85rem 0 0;
+  font-size: 0.92rem;
+  color: var(--text-2);
+  max-width: 68ch;
+}
+
+.exp-body {
+  padding: 0 1.5rem 1.4rem;
+}
+
+.exp-points {
+  display: grid;
+  gap: 0.55rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  margin-top: 0.4rem;
+}
+
+.exp-points li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.92rem;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
+.exp-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.exp-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1.1rem;
+}
+
+@media (max-width: 640px) {
+  .exp-header {
+    padding: 1.15rem 1.1rem 1rem;
+  }
+
+  .exp-body {
+    padding: 0 1.1rem 1.15rem;
+  }
+
+  .exp-role {
+    font-size: 1rem;
+  }
 }

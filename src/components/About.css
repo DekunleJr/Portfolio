@@ -1,52 +1,112 @@
 .about {
-  padding: 4rem;
-  background-color: #1a1a1a; /* Dark mode background */
+  background: var(--bg-soft);
+  border-block: 1px solid var(--border);
 }
 
-.about-content {
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+.about-text p {
+  color: var(--text-2);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.about-text p strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.about-card {
+  padding: 1.6rem;
+}
+
+.about-id {
   display: flex;
-  gap: 2rem;
   align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.25rem;
 }
 
-.about-image {
-  flex: 1;
+.about-photo {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(52, 211, 153, 0.4);
+  flex-shrink: 0;
 }
 
-.about-image img {
-  width: 100%;
-  border-radius: 10px;
+.about-name {
+  font-size: 1.02rem;
+  margin-bottom: 0.2em;
 }
 
-.about-text {
-  flex: 2;
+.about-role {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.25em;
 }
 
-.about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #f8f9fa; /* Light heading for dark mode */
+.about-location {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
 }
 
-.about p {
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-  color: #adb5bd; /* Muted light text for dark mode */
+.about-facts {
+  margin: 0;
+  display: grid;
+  gap: 1rem;
 }
 
-.skills-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+.about-fact dt {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
 }
 
-.skills-list li {
-  background-color: #343a40; /* Darker background for tags */
-  color: #f8f9fa; /* Light text for dark mode tags */
-  padding: 0.5rem 1rem;
-  border-radius: 5px; /* Slightly less rounded corners */
+.about-fact dd {
+  margin: 0;
   font-size: 0.9rem;
-  font-weight: 500; /* Slightly bolder text */
+  color: var(--text-2);
+  line-height: 1.55;
+}
+
+.about-certs li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.about-certs li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+@media (max-width: 860px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card {
+    max-width: 460px;
+  }
 }

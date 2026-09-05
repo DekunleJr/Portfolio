@@ -1,68 +1,94 @@
-import React from "react";
-import "./Projects.css";
+import Reveal from './Reveal';
+import projects from '../data/projects';
+import './Projects.css';
+
+const ProjectLink = ({ link, featured = false }) => {
+  const cls =
+    link.kind === 'internal' || featured
+      ? 'btn btn-primary btn-sm'
+      : 'project-link';
+  const external = link.kind === 'external';
+  return (
+    <a
+      className={cls}
+      href={link.href}
+      {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+    >
+      {link.label}
+      {external && (
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M7 17 17 7M9 7h8v8" />
+        </svg>
+      )}
+    </a>
+  );
+};
 
 const Projects = () => {
+  const flagship = projects.find((p) => p.featured);
+  const rest = projects.filter((p) => !p.featured);
+
   return (
-    <section id="projects" className="projects">
-      <h3>What I do?</h3>
-      <h2>Here are some of the projects I've worked on:</h2>
-      <div className="projects-grid">
-        <a
-          href="https://mioshio.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-item"
-        >
-          <img src="/mioshio.svg" alt="Mioshio Project" />
-          <h3>Backend Development (mioshio)</h3>
-          <p>
-            Designed and implemented a scalable backend for a dynamic web
-            application using Node.js and Express.js, featuring robust API
-            development and MySQL integration.
+    <section id="projects" className="projects section">
+      <div className="container">
+        <Reveal className="section-head">
+          <p className="section-label mono">Projects</p>
+          <h2 className="section-title">Work in production.</h2>
+          <p className="section-lead">
+            Systems I have built and shipped — from a production insurance platform to backend
+            services powering live products.
           </p>
-        </a>
-        <a
-          href="https://www.citedu.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-item"
-        >
-          <img src="/cit.jpg" alt="CIT Project" />
-          <h3>Custom Web Application Backend Development (CIT)</h3>
-          <p>
-            Designed and implemented a scalable backend for a dynamic web
-            application using Node.js and Express.js, featuring robust API
-            development and MongoDB integration.
-          </p>
-        </a>
-        <a
-          href="https://tradereturn.online/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-item"
-        >
-          <img src="/tradereturn_favicon.png" alt="Trade Return Project" />
-          <h3>Custom Web Application Backend Development (Trade Return)</h3>
-          <p>
-            Developed and tested a highly efficient and scalable REST API using
-            Express.js and Node.js, ensuring robust error handling and external
-            API integration with MySQL.
-          </p>
-        </a>
-        <a
-          href="https://github.com/DekunleJr/Mini-Ecommerce"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-item"
-        >
-          <img src="/mini.png" alt="Mini E-Commerce Website" />
-          <h3>Mini E-Commerce Website</h3>
-          <p>
-            Designed and implemented a REST API backend for an e-commerce
-            platform using Node.js and Express.js, with secure data storage in
-            PostgreSQL and comprehensive user authentication.
-          </p>
-        </a>
+        </Reveal>
+
+        {flagship && (
+          <Reveal className="project-flagship" delay={80}>
+            <div className="project-flagship-meta mono">
+              <span className="flagship-tag">Flagship</span>
+              <span>{flagship.type}</span>
+            </div>
+            <div className="project-flagship-body">
+              <h3 className="project-flagship-title">{flagship.name}</h3>
+              <p className="project-flagship-desc">{flagship.description}</p>
+              <p className="project-flagship-built">{flagship.built}</p>
+              <div className="project-tech">
+                {flagship.tech.map((t) => (
+                  <span key={t} className="tech-chip">{t}</span>
+                ))}
+              </div>
+              <div className="project-links">
+                {flagship.links.map((l) => (
+                  <ProjectLink key={l.href + l.label} link={l} featured />
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        )}
+
+        <div className="projects-grid">
+          {rest.map((project, i) => (
+            <Reveal key={project.id} className="project-card card" delay={Math.min(i * 70, 210)}>
+              {project.image && (
+                <div className="project-brand">
+                  <img src={project.image} alt={project.imageAlt} loading="lazy" />
+                </div>
+              )}
+              <p className="project-type mono">{project.type}</p>
+              <h3 className="project-name">{project.name}</h3>
+              <p className="project-desc">{project.description}</p>
+              <p className="project-built">{project.built}</p>
+              <div className="project-tech">
+                {project.tech.map((t) => (
+                  <span key={t} className="tech-chip">{t}</span>
+                ))}
+              </div>
+              <div className="project-links">
+                {project.links.map((l) => (
+                  <ProjectLink key={l.href + l.label} link={l} />
+                ))}
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );

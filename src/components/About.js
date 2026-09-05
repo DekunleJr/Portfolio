@@ -1,34 +1,67 @@
-import React from "react";
-import "./About.css";
+import Reveal from './Reveal';
+import profile from '../data/profile';
+import './About.css';
 
-const About = () => {
-  return (
-    <section id="about" className="about">
-      <div className="about-content">
-        <div className="about-text">
-          <h3>About Me</h3>
-          <h2>Who Am I?</h2>
+const About = () => (
+  <section id="about" className="about section">
+    <div className="container">
+      <Reveal className="section-head">
+        <p className="section-label mono">About</p>
+        <h2 className="section-title">From mechanical engineering to production software.</h2>
+      </Reveal>
+
+      <div className="about-grid">
+        <Reveal className="about-text" delay={80}>
           <p>
-            I am a passionate back-end developer with a knack for transforming
-            complex problems into elegant, efficient, and scalable solutions.
-            With over three years of hands-on experience, I specialize in
-            Node.js and have a deep understanding of database technologies like
-            MongoDB, MySQL, and PostgreSQL.
+            I studied Mechanical Engineering at the Federal University of Technology, Akure,
+            and moved into software engineering in 2021 through ALX Africa. Since then I have
+            worked across backend and full-stack roles — building APIs, data systems,
+            integrations, payments and real-time features for products in production.
           </p>
           <p>
-            {" "}
-            My journey from Mechanical Engineering to software development has
-            equipped me with a unique problem-solving perspective and a
-            relentless drive for precision and quality. I thrive on building
-            robust server-side applications and RESTful APIs that power seamless
-            user experiences. I am not just a coder; I am a craftsman dedicated
-            to building reliable and high-performance software that makes a
-            difference.
+            Today I&apos;m a Full-Stack Engineer at Trulaju, a telematics-based,
+            pay-per-kilometer vehicle insurance platform. I work on a substantial production
+            backend: GPS telemetry pipelines, mileage accounting, policy and claims workflows,
+            payment integrations, background processing and cloud deployment.
           </p>
-        </div>
+          <p>
+            My background gives me a practical, problem-first approach: understand the
+            business, design the system, build it, deploy it — and keep it running.
+          </p>
+        </Reveal>
+
+        <Reveal className="about-card card" delay={180}>
+          <div className="about-id">
+            <img className="about-photo" src={profile.photo} alt={`Portrait of ${profile.name}`} />
+            <div>
+              <h3 className="about-name">{profile.name}</h3>
+              <p className="about-role mono">{profile.role}</p>
+              <p className="about-location">{profile.location}</p>
+            </div>
+          </div>
+
+          <dl className="about-facts">
+            <div className="about-fact">
+              <dt>Education</dt>
+              <dd>
+                {profile.education.degree}, {profile.education.institution} ({profile.education.year})
+              </dd>
+            </div>
+            <div className="about-fact">
+              <dt>Certifications</dt>
+              <dd>
+                <ul className="about-certs">
+                  {profile.certifications.map((c) => (
+                    <li key={c}>{c}</li>
+                  ))}
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </Reveal>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default About;

@@ -1,28 +1,32 @@
-import React from "react";
-import "./App.css";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Education from "./components/Education";
-import Contact from "./components/Contact";
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Trulaju from './components/Trulaju';
+import Skills from './components/Skills';
+import Capabilities from './components/Capabilities';
+import Process from './components/Process';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Header />
-      <div className="main-content">
+      <main>
         <Hero />
         <About />
-        <Projects />
-        <Skills />
         <Experience />
-        <Education />
+        <Projects />
+        <Trulaju />
+        <Skills />
+        <Capabilities />
+        <Process />
         <Contact />
-      </div>
-    </div>
+      </main>
+      <Footer />
+    </>
   );
 }
 
